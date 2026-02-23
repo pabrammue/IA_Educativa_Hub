@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Recursos IA · Tu Centro Educativo</title>
+  <title>Recursos IA · Panel del Profesorado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -186,6 +186,44 @@
     .card:nth-child(5) { animation-delay: 0.40s; }
     .card:nth-child(6) { animation-delay: 0.48s; }
 
+    /* Section divider */
+    .section-divider {
+      text-align: center;
+      margin: 2rem 0 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 100px;
+      padding: 0.4rem 1.1rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      box-shadow: var(--shadow-sm);
+      letter-spacing: 0.01em;
+    }
+
+    .section-label span { font-size: 1rem; }
+
+    /* Plagiarism grid - 2 columns */
+    .grid-plagiarism {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-plagiarism .card:nth-child(1) { animation-delay: 0.60s; }
+    .grid-plagiarism .card:nth-child(2) { animation-delay: 0.68s; }
+
+    /* Plagiarism card accent colors */
+    .card-plagiarism:nth-child(1) { --bar-color: #ef4444; --icon-bg: #fef2f2; --icon-color: #dc2626; }
+    .card-plagiarism:nth-child(2) { --bar-color: #8b5cf6; --icon-bg: #f5f3ff; --icon-color: #7c3aed; }
+
     .card:hover {
       transform: translateY(-7px);
       box-shadow: var(--shadow-lg);
@@ -291,6 +329,9 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
       }
+      .grid-plagiarism {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .container { padding: 1.5rem; }
       .header { margin-bottom: 2rem; }
     }
@@ -369,6 +410,19 @@
         margin-top: 0.25rem;
       }
 
+      .section-divider {
+        margin: 1.5rem 0 1rem;
+      }
+
+      .section-label {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.9rem;
+      }
+
+      .grid-plagiarism {
+        grid-template-columns: 1fr;
+      }
+
       /* Disable hover effects on touch (they cause sticky states) */
       .card:hover {
         transform: none;
@@ -441,10 +495,10 @@
   <div class="container">
     <div class="header">
       <div class="header-badge">
-        <span>🎓</span> Panel del Alumno
+        <span>🧑‍🏫</span> Panel del Profesorado
       </div>
       <h1>Tus recursos de <span class="highlight">IA educativa</span></h1>
-      <p>Herramientas de inteligencia artificial para ayudarte a estudiar, investigar y aprender mejor</p>
+      <p>Herramientas de inteligencia artificial para preparar clases, crear materiales y optimizar tu labor docente</p>
     </div>
 
     <div class="grid">
@@ -456,7 +510,7 @@
         </div>
         <div class="card-content">
           <div class="card-title">Mathew AI</div>
-          <div class="card-desc">Creación de situaciones de aprendizaje</div>
+          <div class="card-desc">Genera situaciones de aprendizaje adaptadas a tu programación</div>
           <span class="card-tag">Situaciones de Aprendizaje</span>
         </div>
       </a>
@@ -468,7 +522,7 @@
         </div>
         <div class="card-content">
           <div class="card-title">Gems</div>
-          <div class="card-desc">Asistente IA personalizado</div>
+          <div class="card-desc">Asistente IA personalizado para preparar materiales y resolver dudas</div>
           <span class="card-tag">IA Personalizada</span>
         </div>
       </a>
@@ -480,7 +534,7 @@
         </div>
         <div class="card-content">
           <div class="card-title">NotebookLM</div>
-          <div class="card-desc">Trabaja con materiales propios</div>
+          <div class="card-desc">Analiza y trabaja con tus propios documentos y apuntes</div>
           <span class="card-tag">Materiales Propios</span>
         </div>
       </a>
@@ -492,7 +546,7 @@
         </div>
         <div class="card-content">
           <div class="card-title">Top Worksheets</div>
-          <div class="card-desc">Fichas y ejercicios interactivos autocorregibles</div>
+          <div class="card-desc">Crea fichas y ejercicios interactivos autocorregibles</div>
           <span class="card-tag">Ejercicios Interactivos</span>
         </div>
       </a>
@@ -504,7 +558,7 @@
         </div>
         <div class="card-content">
           <div class="card-title">ChatGPT</div>
-          <div class="card-desc">Pregunta, redacta y aprende con IA conversacional</div>
+          <div class="card-desc">Asistente conversacional para generar ideas, redactar y planificar</div>
           <span class="card-tag">Asistente General</span>
         </div>
       </a>
@@ -516,15 +570,50 @@
         </div>
         <div class="card-content">
           <div class="card-title">Scholar Labs</div>
-          <div class="card-desc">Busca artículos y fuentes académicas fiables</div>
+          <div class="card-desc">Busca artículos y fuentes académicas fiables para tus clases</div>
           <span class="card-tag">Investigación Académica</span>
         </div>
       </a>
 
     </div>
 
+    <!-- Plagiarism Detection Section -->
+    <div class="section-divider">
+      <div class="section-label">
+        <span>🔍</span> Detección de Plagio con IA
+      </div>
+    </div>
+
+    <div class="grid grid-plagiarism">
+
+      <a href="https://www.turnitin.com/" target="_blank" rel="noopener" class="card card-plagiarism">
+        
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">Turnitin</div>
+          <div class="card-desc">Detector de plagio y contenido generado por IA en trabajos académicos</div>
+          <span class="card-tag">Detección de Plagio</span>
+        </div>
+      </a>
+
+      <a href="https://www.zerogpt.com/" target="_blank" rel="noopener" class="card card-plagiarism">
+        
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ZeroGPT</div>
+          <div class="card-desc">Detecta si un texto ha sido generado por inteligencia artificial</div>
+          <span class="card-tag">Detección de IA</span>
+        </div>
+      </a>
+
+    </div>
+
     <div class="footer">
-      💡 Usa estas herramientas como apoyo a tu aprendizaje · Verifica siempre la información
+      💡 Usa estas herramientas como apoyo a tu labor docente · Verifica siempre la información generada por IA
     </div>
   </div>
 
